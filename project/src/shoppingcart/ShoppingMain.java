@@ -74,23 +74,32 @@ public class ShoppingMain {
 	public static int getIntegerInput() {
 		Scanner sc = new Scanner(System.in);
 		int num = 0;
-		try {
-			num = sc.nextInt();
-		} catch (Exception e) {
-			System.out.println("Enter Valid Number");
-			getIntegerInput();
+		boolean flag = true;
+		while (flag) {
+			try {
+				num = sc.nextInt();
+				flag = false;
+			} catch (Exception e) {
+				System.out.println("Enter Valid Number");
+				sc.nextLine();
+			}
 		}
+
 		return num;
 	}
 
 	public static byte getByteInput() {
 		Scanner sc = new Scanner(System.in);
 		byte num = 0;
-		try {
-			num = sc.nextByte();
-		} catch (Exception e) {
-			System.out.println("Enter Valid Number");
-			getByteInput();
+		boolean flag = true;
+		while (flag) {
+			try {
+				num = sc.nextByte();
+				flag = false;
+			} catch (Exception e) {
+				System.out.println("Enter Valid Number");
+				sc.nextLine();
+			}
 		}
 		return num;
 	}
