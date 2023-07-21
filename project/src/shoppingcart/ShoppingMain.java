@@ -194,7 +194,7 @@ public class ShoppingMain {
 					} else if (placeorder == CANCEL_ORDER) {
 						System.out.println("Your Order Cancelled");
 					} else {
-						System.out.println("Invalid Key your order moved to cart");
+						System.out.println("Invalid Key your order moved to cart.");
 						user.addOrderToCart();
 					}
 				} else {
